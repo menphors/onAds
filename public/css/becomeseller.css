@@ -1,0 +1,9 @@
+div.item img{
+	width: 100% !important;
+	height: 300px !important;
+}
+div.rounded img{
+	width: 200px !important;
+	height: 200px !important;
+	
+}

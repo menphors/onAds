@@ -1,0 +1,97 @@
+.navbar-right{
+	margin-right: 10px;
+}
+
+body html{
+	margin:0;
+	padding:0;
+}
+.text-white{
+	color: white;
+}
+
+img{
+	width:100%;
+	height:50%;
+	
+}
+
+.navbar-color .navbar-brand img{
+	width: 150px;
+	height: 50px;
+	margin-top:-10px;
+
+}
+.navbar-color2 .navbar-brand img{
+	width: 150px;
+	height: 50px;
+	margin-top:-10px;
+	
+}
+.my-sizes .item img{
+	height: 480px;
+}
+.backgroundimg{
+	
+}
+.navbar-color{
+	background:rgba(0,0,0,0);
+}
+.navbar-color .navbar-brand{
+
+	color:white;
+}
+.navbar-color2{
+	background: black;
+}
+
+.navbar-color2 .navbar-brand{
+	color:white;
+}
+.navbar-sna .mynav-color li a{
+	color:white;
+}
+.navbar-sna .mynav-color .dropdown-menu li a{
+	color:black;
+}
+
+#fontsizesmall{
+	font-size: 2px;
+}
+.jumbotron{
+	margin-left: -20px;
+	margin-right: -15px;
+	background-size: cover;
+	background-color: black;
+}
+
+.site-footer{
+
+	padding-bottom:50px;
+	background-color:black;
+	color:solid grey;
+	height: 360px;
+}
+.bottom-footer{
+	color:white;
+	background-color: black;
+
+}
+
+.footer-nav li{
+	list-style:none;
+
+	
+	
+}
+.footer-nav li a{
+	color:white;
+
+	
+}
+.copy-style{
+	color:white;
+	
+
+}
+
