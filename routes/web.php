@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'view'], function () {
+    Route::get('/order-detail', ['as' => 'product', 'uses' => 'ProductController@index']);
+	Route::get('/proceed', ['as' => 'product', 'uses' => 'ProductController@proceed']);
+
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
