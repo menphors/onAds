@@ -10,9 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::group(['prefix' => 'view'], function () {
     Route::get('/order-detail', ['as' => 'product', 'uses' => 'ProductController@index']);
@@ -23,5 +22,4 @@ Route::group(['prefix' => 'view'], function () {
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
