@@ -172,10 +172,17 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: button.js v3.3.7
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: button.js v3.3.0
+ * http://getbootstrap.com/javascript/#buttons
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -192,7 +199,11 @@ if (typeof jQuery === 'undefined') {
     this.isLoading = false
   }
 
+<<<<<<< HEAD
   Button.VERSION  = '3.3.7'
+=======
+  Button.VERSION  = '3.3.0'
+>>>>>>> soklim
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
@@ -204,7 +215,11 @@ if (typeof jQuery === 'undefined') {
     var val  = $el.is('input') ? 'val' : 'html'
     var data = $el.data()
 
+<<<<<<< HEAD
     state += 'Text'
+=======
+    state = state + 'Text'
+>>>>>>> soklim
 
     if (data.resetText == null) $el.data('resetText', $el[val]())
 
@@ -214,10 +229,17 @@ if (typeof jQuery === 'undefined') {
 
       if (state == 'loadingText') {
         this.isLoading = true
+<<<<<<< HEAD
         $el.addClass(d).attr(d, d).prop(d, true)
       } else if (this.isLoading) {
         this.isLoading = false
         $el.removeClass(d).removeAttr(d).prop(d, false)
+=======
+        $el.addClass(d).attr(d, d)
+      } else if (this.isLoading) {
+        this.isLoading = false
+        $el.removeClass(d).removeAttr(d)
+>>>>>>> soklim
       }
     }, this), 0)
   }
@@ -229,6 +251,7 @@ if (typeof jQuery === 'undefined') {
     if ($parent.length) {
       var $input = this.$element.find('input')
       if ($input.prop('type') == 'radio') {
+<<<<<<< HEAD
         if ($input.prop('checked')) changed = false
         $parent.find('.active').removeClass('active')
         this.$element.addClass('active')
@@ -242,6 +265,17 @@ if (typeof jQuery === 'undefined') {
       this.$element.attr('aria-pressed', !this.$element.hasClass('active'))
       this.$element.toggleClass('active')
     }
+=======
+        if ($input.prop('checked') && this.$element.hasClass('active')) changed = false
+        else $parent.find('.active').removeClass('active')
+      }
+      if (changed) $input.prop('checked', !this.$element.hasClass('active')).trigger('change')
+    } else {
+      this.$element.attr('aria-pressed', !this.$element.hasClass('active'))
+    }
+
+    if (changed) this.$element.toggleClass('active')
+>>>>>>> soklim
   }
 
 
@@ -281,6 +315,7 @@ if (typeof jQuery === 'undefined') {
 
   $(document)
     .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+<<<<<<< HEAD
       var $btn = $(e.target).closest('.btn')
       Plugin.call($btn, 'toggle')
       if (!($(e.target).is('input[type="radio"], input[type="checkbox"]'))) {
@@ -293,15 +328,31 @@ if (typeof jQuery === 'undefined') {
     })
     .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
+=======
+      var $btn = $(e.target)
+      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
+      Plugin.call($btn, 'toggle')
+      e.preventDefault()
+    })
+    .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+      $(e.target).closest('.btn').toggleClass('focus', e.type == 'focus')
+>>>>>>> soklim
     })
 
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: carousel.js v3.3.7
  * http://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: carousel.js v3.3.0
+ * http://getbootstrap.com/javascript/#carousel
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -316,10 +367,17 @@ if (typeof jQuery === 'undefined') {
     this.$element    = $(element)
     this.$indicators = this.$element.find('.carousel-indicators')
     this.options     = options
+<<<<<<< HEAD
     this.paused      = null
     this.sliding     = null
     this.interval    = null
     this.$active     = null
+=======
+    this.paused      =
+    this.sliding     =
+    this.interval    =
+    this.$active     =
+>>>>>>> soklim
     this.$items      = null
 
     this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
@@ -329,7 +387,11 @@ if (typeof jQuery === 'undefined') {
       .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
   }
 
+<<<<<<< HEAD
   Carousel.VERSION  = '3.3.7'
+=======
+  Carousel.VERSION  = '3.3.0'
+>>>>>>> soklim
 
   Carousel.TRANSITION_DURATION = 600
 
@@ -341,7 +403,10 @@ if (typeof jQuery === 'undefined') {
   }
 
   Carousel.prototype.keydown = function (e) {
+<<<<<<< HEAD
     if (/input|textarea/i.test(e.target.tagName)) return
+=======
+>>>>>>> soklim
     switch (e.which) {
       case 37: this.prev(); break
       case 39: this.next(); break
@@ -536,6 +601,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
@@ -544,6 +610,15 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 /* jshint latedef: false */
+=======
+ * Bootstrap: collapse.js v3.3.0
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+>>>>>>> soklim
 
 +function ($) {
   'use strict';
@@ -710,7 +785,11 @@ if (typeof jQuery === 'undefined') {
       var data    = $this.data('bs.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
+<<<<<<< HEAD
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+=======
+      if (!data && options.toggle && option == 'show') options.toggle = false
+>>>>>>> soklim
       if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
       if (typeof option == 'string') data[option]()
     })
@@ -741,7 +820,11 @@ if (typeof jQuery === 'undefined') {
 
     var $target = getTargetFromTrigger($this)
     var data    = $target.data('bs.collapse')
+<<<<<<< HEAD
     var option  = data ? 'toggle' : $this.data()
+=======
+    var option  = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this })
+>>>>>>> soklim
 
     Plugin.call($target, option)
   })
@@ -749,10 +832,17 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: dropdown.js v3.3.0
+ * http://getbootstrap.com/javascript/#dropdowns
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -769,6 +859,7 @@ if (typeof jQuery === 'undefined') {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
+<<<<<<< HEAD
   Dropdown.VERSION = '3.3.7'
 
   function getParent($this) {
@@ -804,6 +895,9 @@ if (typeof jQuery === 'undefined') {
       $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
     })
   }
+=======
+  Dropdown.VERSION = '3.3.0'
+>>>>>>> soklim
 
   Dropdown.prototype.toggle = function (e) {
     var $this = $(this)
@@ -818,10 +912,14 @@ if (typeof jQuery === 'undefined') {
     if (!isActive) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
         // if mobile we use a backdrop because click events don't delegate
+<<<<<<< HEAD
         $(document.createElement('div'))
           .addClass('dropdown-backdrop')
           .insertAfter($(this))
           .on('click', clearMenus)
+=======
+        $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
+>>>>>>> soklim
       }
 
       var relatedTarget = { relatedTarget: this }
@@ -835,14 +933,22 @@ if (typeof jQuery === 'undefined') {
 
       $parent
         .toggleClass('open')
+<<<<<<< HEAD
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
+=======
+        .trigger('shown.bs.dropdown', relatedTarget)
+>>>>>>> soklim
     }
 
     return false
   }
 
   Dropdown.prototype.keydown = function (e) {
+<<<<<<< HEAD
     if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+=======
+    if (!/(38|40|27|32)/.test(e.which)) return
+>>>>>>> soklim
 
     var $this = $(this)
 
@@ -854,25 +960,75 @@ if (typeof jQuery === 'undefined') {
     var $parent  = getParent($this)
     var isActive = $parent.hasClass('open')
 
+<<<<<<< HEAD
     if (!isActive && e.which != 27 || isActive && e.which == 27) {
+=======
+    if ((!isActive && e.which != 27) || (isActive && e.which == 27)) {
+>>>>>>> soklim
       if (e.which == 27) $parent.find(toggle).trigger('focus')
       return $this.trigger('click')
     }
 
+<<<<<<< HEAD
     var desc = ' li:not(.disabled):visible a'
     var $items = $parent.find('.dropdown-menu' + desc)
+=======
+    var desc = ' li:not(.divider):visible a'
+    var $items = $parent.find('[role="menu"]' + desc + ', [role="listbox"]' + desc)
+>>>>>>> soklim
 
     if (!$items.length) return
 
     var index = $items.index(e.target)
 
+<<<<<<< HEAD
     if (e.which == 38 && index > 0)                 index--         // up
     if (e.which == 40 && index < $items.length - 1) index++         // down
     if (!~index)                                    index = 0
+=======
+    if (e.which == 38 && index > 0)                 index--                        // up
+    if (e.which == 40 && index < $items.length - 1) index++                        // down
+    if (!~index)                                      index = 0
+>>>>>>> soklim
 
     $items.eq(index).trigger('focus')
   }
 
+<<<<<<< HEAD
+=======
+  function clearMenus(e) {
+    if (e && e.which === 3) return
+    $(backdrop).remove()
+    $(toggle).each(function () {
+      var $this         = $(this)
+      var $parent       = getParent($this)
+      var relatedTarget = { relatedTarget: this }
+
+      if (!$parent.hasClass('open')) return
+
+      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $this.attr('aria-expanded', 'false')
+      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
+    })
+  }
+
+  function getParent($this) {
+    var selector = $this.attr('data-target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+    }
+
+    var $parent = selector && $(selector)
+
+    return $parent && $parent.length ? $parent : $this.parent()
+  }
+
+>>>>>>> soklim
 
   // DROPDOWN PLUGIN DEFINITION
   // ==========================
@@ -910,15 +1066,27 @@ if (typeof jQuery === 'undefined') {
     .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
     .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
     .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+<<<<<<< HEAD
     .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+=======
+    .on('keydown.bs.dropdown.data-api', '[role="menu"]', Dropdown.prototype.keydown)
+    .on('keydown.bs.dropdown.data-api', '[role="listbox"]', Dropdown.prototype.keydown)
+>>>>>>> soklim
 
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: modal.js v3.3.0
+ * http://getbootstrap.com/javascript/#modals
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -930,6 +1098,7 @@ if (typeof jQuery === 'undefined') {
   // ======================
 
   var Modal = function (element, options) {
+<<<<<<< HEAD
     this.options             = options
     this.$body               = $(document.body)
     this.$element            = $(element)
@@ -939,6 +1108,14 @@ if (typeof jQuery === 'undefined') {
     this.originalBodyPad     = null
     this.scrollbarWidth      = 0
     this.ignoreBackdropClick = false
+=======
+    this.options        = options
+    this.$body          = $(document.body)
+    this.$element       = $(element)
+    this.$backdrop      =
+    this.isShown        = null
+    this.scrollbarWidth = 0
+>>>>>>> soklim
 
     if (this.options.remote) {
       this.$element
@@ -949,7 +1126,11 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
+<<<<<<< HEAD
   Modal.VERSION  = '3.3.7'
+=======
+  Modal.VERSION  = '3.3.0'
+>>>>>>> soklim
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -975,6 +1156,7 @@ if (typeof jQuery === 'undefined') {
     this.isShown = true
 
     this.checkScrollbar()
+<<<<<<< HEAD
     this.setScrollbar()
     this.$body.addClass('modal-open')
 
@@ -989,6 +1171,15 @@ if (typeof jQuery === 'undefined') {
       })
     })
 
+=======
+    this.$body.addClass('modal-open')
+
+    this.setScrollbar()
+    this.escape()
+
+    this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
+
+>>>>>>> soklim
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')
 
@@ -1056,9 +1247,13 @@ if (typeof jQuery === 'undefined') {
     $(document)
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
+<<<<<<< HEAD
         if (document !== e.target &&
             this.$element[0] !== e.target &&
             !this.$element.has(e.target).length) {
+=======
+        if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+>>>>>>> soklim
           this.$element.trigger('focus')
         }
       }, this))
@@ -1105,6 +1300,7 @@ if (typeof jQuery === 'undefined') {
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
 
+<<<<<<< HEAD
       this.$backdrop = $(document.createElement('div'))
         .addClass('modal-backdrop ' + animate)
         .appendTo(this.$body)
@@ -1150,6 +1346,7 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
+<<<<<<< HEAD
   // these following methods are used to handle overflowing modals
 
   Modal.prototype.handleUpdate = function () {
@@ -1461,7 +1658,10 @@ if (typeof jQuery === 'undefined') {
         .data('bs.' + this.type, this)
 
       this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+<<<<<<< HEAD
       this.$element.trigger('inserted.bs.' + this.type)
+=======
+>>>>>>> soklim
 
       var pos          = this.getPosition()
       var actualWidth  = $tip[0].offsetWidth
@@ -1515,6 +1715,7 @@ if (typeof jQuery === 'undefined') {
     if (isNaN(marginTop))  marginTop  = 0
     if (isNaN(marginLeft)) marginLeft = 0
 
+<<<<<<< HEAD
     offset.top  += marginTop
     offset.left += marginLeft
 
@@ -1684,6 +1885,7 @@ if (typeof jQuery === 'undefined') {
   }
 
   Tooltip.prototype.tip = function () {
+<<<<<<< HEAD
     if (!this.$tip) {
       this.$tip = $(this.options.template)
       if (this.$tip.length != 1) {
@@ -1852,6 +2054,14 @@ if (typeof jQuery === 'undefined') {
     return (this.$arrow = this.$arrow || this.tip().find('.arrow'))
   }
 
+<<<<<<< HEAD
+=======
+  Popover.prototype.tip = function () {
+    if (!this.$tip) this.$tip = $(this.options.template)
+    return this.$tip
+  }
+
+>>>>>>> soklim
 
   // POPOVER PLUGIN DEFINITION
   // =========================
@@ -1885,6 +2095,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: scrollspy.js v3.3.7
  * http://getbootstrap.com/javascript/#scrollspy
  * ========================================================================
@@ -1952,8 +2163,13 @@ if (typeof jQuery === 'undefined') {
       })
       .sort(function (a, b) { return a[0] - b[0] })
       .each(function () {
+<<<<<<< HEAD
         that.offsets.push(this[0])
         that.targets.push(this[1])
+=======
+        self.offsets.push(this[0])
+        self.targets.push(this[1])
+>>>>>>> soklim
       })
   }
 
@@ -2058,10 +2274,17 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: tab.js v3.3.0
+ * http://getbootstrap.com/javascript/#tabs
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -2149,7 +2372,11 @@ if (typeof jQuery === 'undefined') {
         element.removeClass('fade')
       }
 
+<<<<<<< HEAD
       if (element.parent('.dropdown-menu').length) {
+=======
+      if (element.parent('.dropdown-menu')) {
+>>>>>>> soklim
         element
           .closest('li.dropdown')
             .addClass('active')
@@ -2214,10 +2441,17 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: affix.js v3.3.7
  * http://getbootstrap.com/javascript/#affix
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
+=======
+ * Bootstrap: affix.js v3.3.0
+ * http://getbootstrap.com/javascript/#affix
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+>>>>>>> soklim
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -2236,14 +2470,23 @@ if (typeof jQuery === 'undefined') {
       .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
 
     this.$element     = $(element)
+<<<<<<< HEAD
     this.affixed      = null
     this.unpin        = null
+=======
+    this.affixed      =
+    this.unpin        =
+>>>>>>> soklim
     this.pinnedOffset = null
 
     this.checkPosition()
   }
 
+<<<<<<< HEAD
   Affix.VERSION  = '3.3.7'
+=======
+  Affix.VERSION  = '3.3.0'
+>>>>>>> soklim
 
   Affix.RESET    = 'affix affix-top affix-bottom'
 
@@ -2268,7 +2511,11 @@ if (typeof jQuery === 'undefined') {
     var colliderTop    = initializing ? scrollTop : position.top
     var colliderHeight = initializing ? targetHeight : height
 
+<<<<<<< HEAD
     if (offsetTop != null && scrollTop <= offsetTop) return 'top'
+=======
+    if (offsetTop != null && colliderTop <= offsetTop) return 'top'
+>>>>>>> soklim
     if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
 
     return false

@@ -23,3 +23,10 @@ Route::group(['prefix' => 'view'], function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'categories'], function () {
+
+    Route::get('/viewcategory', ['as' => 'categories/view-categories', 'uses' => 'CategoryController@index']);
+
+
+});
