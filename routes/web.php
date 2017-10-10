@@ -12,7 +12,7 @@
 */
 Auth::routes();
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 Route::group(['prefix' => 'language'], function () {
     Route::post('/', [
