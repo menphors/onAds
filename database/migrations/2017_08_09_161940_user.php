@@ -13,17 +13,19 @@ class User extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('email')->unique();
-			$table->string('password');
-            $table->integer('created_by')->default(0);
-            $table->integer('updated_by')->default(0);
-            $table->rememberToken();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+             if(!Schema::hasTable('users')) {
+            Schema::create('users', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name')->unique();
+                $table->string('email')->unique();
+                $table->string('password');
+                $table->integer('created_by')->default(0);
+                $table->integer('updated_by')->default(0);
+                $table->rememberToken();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

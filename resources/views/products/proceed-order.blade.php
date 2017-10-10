@@ -400,42 +400,38 @@
                         </a>
                     </div><!-- /carousel -->
                 </div>
+            <div style="height:15px;"></div>
             <header>
                 <table border="1">
-                    <tr>
+                    <tr class="form-group">
+                        <th></th>
                         <th colspan="2">Compare Packages</th>
-                        <th colspan="2"></th>
-                        <th colspan="2"></th>
+                        <th></th>
                     </tr>
-                    <tr>
-                        <td>fgf</td>
-                        <td>fgfg</td>
-                        <td>fgf</td>
-                        <td>fgf</td>
+                    <tr class="form-group">
+                        <td class="col-md-4">fgf</td>
+                        <td class="col-md-4">fgfg</td>
+                        <td class="col-md-4">fgf</td>
                     </tr>
-                    <tr>
-                        <td>fgf</td>
-                        <td>fgfg</td>
-                        <td>fgf</td>
-                        <td>fgf</td>
+                    <tr class="form-group">
+                        <td class="col-md-4">fgf</td>
+                        <td class="col-md-4">fgfg</td>
+                        <td class="col-md-4">fgf</td>
                     </tr>
-                    <tr>
-                        <td>fgf</td>
-                        <td>fgfg</td>
-                        <td>fgf</td>
-                        <td>fgf</td>
+                    <tr class="form-group">
+                        <td class="col-md-4">fgf</td>
+                        <td class="col-md-4">fgfg</td>
+                        <td class="col-md-4">fgf</td>
                     </tr>
-                    <tr>
-                        <td>fgfg</td>
-                        <td>fgfg</td>
-                        <td>fgf</td>
-                        <td>fgf</td>
+                    <tr class="form-group">
+                        <td class="col-md-4">fgfg</td>
+                        <td class="col-md-4">fgfg</td>
+                        <td class="col-md-4">fgf</td>
                     </tr>
-                    <tr>
-                        <td>fgf</td>
-                        <td>fgfg</td>
-                        <td>fgf</td>
-                        <td>fgf</td>
+                    <tr class="form-group">
+                        <td><button class="col-md-12 btn-success btn"><span class=""></span>Proceed to Payment</button></td>
+                        <td><button class="col-md-12 btn-success btn"><span class=""></span>Proceed to Payment</button></td>
+                        <td><button class="col-md-12 btn-success btn"><span class=""></span>Proceed to Payment</button></td>
                     </tr>
                 </table>
             </header>
